@@ -1,0 +1,6 @@
+@PrimeSeats_HostAddress = http://localhost:5096
+
+GET {{PrimeSeats_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
