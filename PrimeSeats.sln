@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeSeats", "PrimeSeats\PrimeSeats.csproj", "{EBE0853E-55D2-4493-870D-1F17E1E3A099}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tesla", "PrimeSeats\Tesla.csproj", "{EBE0853E-55D2-4493-870D-1F17E1E3A099}"
 	ProjectSection(ProjectDependencies) = postProject
 		{1F233E83-3571-4E8E-82F1-1337CD376B7E} = {1F233E83-3571-4E8E-82F1-1337CD376B7E}
 		{A882920C-39EB-4094-8581-A8790FDF5133} = {A882920C-39EB-4094-8581-A8790FDF5133}
 		{F15E3431-5FB2-44AF-BB69-7078991DB1EE} = {F15E3431-5FB2-44AF-BB69-7078991DB1EE}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeSeats_Data", "PrimeSeats_Data\PrimeSeats_Data.csproj", "{1F233E83-3571-4E8E-82F1-1337CD376B7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimeSeats_Data", "PrimeSeats_Data\PrimeSeats_Data.csproj", "{1F233E83-3571-4E8E-82F1-1337CD376B7E}"
 	ProjectSection(ProjectDependencies) = postProject
 		{A882920C-39EB-4094-8581-A8790FDF5133} = {A882920C-39EB-4094-8581-A8790FDF5133}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeSeats_Model", "PrimeSeats_Model\PrimeSeats_Model.csproj", "{A882920C-39EB-4094-8581-A8790FDF5133}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimeSeats_Model", "PrimeSeats_Model\PrimeSeats_Model.csproj", "{A882920C-39EB-4094-8581-A8790FDF5133}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeSeats_Utility", "PrimeSeats_Utility\PrimeSeats_Utility.csproj", "{F15E3431-5FB2-44AF-BB69-7078991DB1EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PrimeSeats_Utility", "PrimeSeats_Utility\PrimeSeats_Utility.csproj", "{F15E3431-5FB2-44AF-BB69-7078991DB1EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -16,6 +16,17 @@ internal class Program
     {
         var builder = WebApplication.CreateBuilder(args);
 
+        builder.Services.AddCors(options =>
+        {
+            options.AddPolicy("AllowSpecificOrigin",
+                policy =>
+                {
+                    policy.WithOrigins("http://localhost:4200") // Replace with your Angular app's URL
+                          .AllowAnyHeader()
+                          .AllowAnyMethod();
+                    //.AllowCredentials("Access-Control-Allow-Origin");
+                });
+        });
         // Add services to the container.
 
         builder.Services.AddControllers();
@@ -42,6 +53,8 @@ internal class Program
                 IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
             };
         });
+
+        //git test-----
         //jwt end ----------------
 
         builder.Services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOption>();
@@ -55,6 +68,8 @@ internal class Program
 
         var app = builder.Build();
 
+        app.UseCors("AllowSpecificOrigin");
+        app.UseRouting();
         // Configure the HTTP request pipeline.
         if (app.Environment.IsDevelopment())
         {
@@ -63,7 +78,7 @@ internal class Program
         }
 
         app.UseHttpsRedirection();
-        app.UseAuthentication();    
+        app.UseAuthentication();
         app.UseAuthorization();
 
         app.MapControllers();
