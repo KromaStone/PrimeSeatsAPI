@@ -37,5 +37,7 @@
         public string Password { get; set; }
         public int PhoneNumber { get; set; }
         public string Address { get; set; }
+        public string RefreshToken { get; set; }
+        public DateTime RefreshTokenExpiry { get; set; }
     }
 }

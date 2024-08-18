@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using PrimeSeats;
@@ -21,7 +22,7 @@ internal class Program
             options.AddPolicy("AllowSpecificOrigin",
                 policy =>
                 {
-                    policy.WithOrigins("http://localhost:4200") // Replace with your Angular app's URL
+                    policy.WithOrigins("http://localhost:4200", "https://tesla-gb7wp3ws9-kromastones-projects.vercel.app") // Replace with your Angular app's URL
                           .AllowAnyHeader()
                           .AllowAnyMethod();
                     //.AllowCredentials("Access-Control-Allow-Origin");
@@ -50,7 +51,9 @@ internal class Program
                 ValidateLifetime = true,
                 ValidIssuer  = builder.Configuration["Jwt:Issuer"],
                 ValidAudience = builder.Configuration["Jwt:Audience"],
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
+                ValidateIssuerSigningKey = true,
+                ClockSkew = TimeSpan.Zero
             };
         });
 
