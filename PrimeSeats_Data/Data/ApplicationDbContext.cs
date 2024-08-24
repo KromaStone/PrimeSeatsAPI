@@ -10,6 +10,7 @@ namespace PrimeSeats_Data.Data
             : base(options)
         {
         }
-    public DbSet<Admin> admins { get; set; }
+        public DbSet<Admin> admins { get; set; }
+        public DbSet<Category> categories { get; set; }
     }
 }
